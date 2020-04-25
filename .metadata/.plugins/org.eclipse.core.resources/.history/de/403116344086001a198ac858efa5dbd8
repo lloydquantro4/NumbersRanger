@@ -1,0 +1,10 @@
+package numberRanger;
+import java.util.Collection;
+
+public interface NumberRangeSummarizer {
+	  //collect the input
+    Collection<Integer> collect(String input);
+
+    
+    String summarizeCollection(Collection<Integer> input);
+}

@@ -47,8 +47,8 @@ public class NumbersConveter implements NumberRangeSummarizer {
 		while (iteratedCollection.hasNext()) {
 
 			currentValue = iteratedCollection.next();
-
-			if (isFirstElement) {
+			if (isFirstElement)
+			{
 				counter = currentValue;
 				sb.append(currentValue);
 				counter++;
@@ -56,18 +56,22 @@ public class NumbersConveter implements NumberRangeSummarizer {
 				continue;
 			}
 
-			if ((currentValue == counter) && (isConsecutive)) {
-				if (iteratedCollection.hasNext()) {
-					
+			if ((currentValue == counter) && (isConsecutive))
+			{
+				if (iteratedCollection.hasNext())
+				{
 					runningVal = currentValue;
 					counter++;
 					continue;
-				} else {
+				} else
+				{
 					sb.append(currentValue);
 				}
-
-			} else if ((currentValue == counter)) {
-				if (iteratedCollection.hasNext()) {
+			} 
+			else if ((currentValue == counter)) 
+			{
+				if (iteratedCollection.hasNext()) 
+				{
 					sb.append("-");
 					counter++;
 					runningVal = currentValue;
@@ -75,20 +79,19 @@ public class NumbersConveter implements NumberRangeSummarizer {
 					continue;
 				}
 			}
-
-			else if (currentValue != counter) {
-				if (isConsecutive) {
+			
+			else if (currentValue != counter) 
+			{
+				if (isConsecutive)
+				{
 					sb.append(runningVal);
-				}
+				}	
 				sb.append("," + currentValue);
 				isConsecutive = false;
 				counter = currentValue;
 				counter++;
 			}
-
 		}
-
 		return sb.toString();
 	}
-
 }

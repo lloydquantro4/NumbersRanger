@@ -1,0 +1,17 @@
+package numberRanger;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		NumbersConveter obj = new NumbersConveter();
+		NumbersConveter obj2 = new NumbersConveter();
+		
+		
+		System.out.println(obj.summarizeCollection(obj.collect("-6, 20,4,5,10")));
+		System.out.println(obj2.summarizeCollection(obj2.collect("1,3,4,5,6")));
+		
+	
+	}
+}
+

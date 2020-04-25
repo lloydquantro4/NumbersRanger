@@ -1,0 +1,88 @@
+package test;
+
+import java.util.Collection;
+import java.util.*;
+
+public class NumbersConveter implements NumberRangeSummarizer {
+
+	
+	public Collection<Integer> collect(String input) {
+		
+		List<Integer> inputNumbers = new ArrayList<Integer>();
+		List<String> inputString = new ArrayList<String>(Arrays.asList(input.split(",")));
+		for(int i=0;i<inputString.size();i++) {
+			inputNumbers.add(Integer.parseInt(inputString.get(i)));
+		}
+		Collections.sort(inputNumbers);
+		//if(inputNumbers instanceof List<Integer>)
+		
+		return inputNumbers;
+	}
+
+	
+	public String summarizeCollection(Collection<Integer> input) {
+		
+
+		Iterator<Integer> iter = input.iterator();
+		
+		StringBuilder sb = new StringBuilder();  
+		
+		boolean isConsecutive =false;
+		boolean isLast=false;
+		int tracker=0;
+		int runningVal = 0;
+		int counter = iter.next();
+		int sizeChecker=0;
+		int x = input.size();
+		sb.append(counter);
+		for (Integer currentValue : input) {
+			sizeChecker++;
+			if(sizeChecker==x) isLast=true;
+			if(tracker==0) {
+				counter++;
+				tracker++;
+				continue;
+			}
+			if((currentValue==counter)&&(isConsecutive)) {
+				
+				runningVal = currentValue;
+				counter++;
+				continue;
+					
+				}
+			else if ((currentValue==counter)) {
+					
+					if(!isLast) {
+						sb.append("-");
+						counter++;
+						runningVal = currentValue;
+						isConsecutive = true;
+						continue;
+					}
+					else {
+						sb.append(currentValue);
+					}
+					
+					
+				}
+				
+			
+			else if (currentValue!=counter) {
+				if(isConsecutive) {
+				sb.append(runningVal);
+				
+			}
+				sb.append(","+ currentValue);
+				isConsecutive = false;
+				counter=currentValue;
+				counter++;
+		  }
+		  
+		
+
+}
+		
+		return sb.toString();
+	}
+	
+}

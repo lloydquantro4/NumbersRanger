@@ -1,0 +1,40 @@
+package numberRanger;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import org.junit.jupiter.api.Test;
+
+class NumbersConveterTest {
+//test collect if empty
+	//test collect if it returns a correct values
+	//test if its Collection<int>
+	
+//test Summarizer
+	//test if correct values
+	//test return type
+	@Test
+	void Collectiontest() {
+		
+		NumbersConveter test1 = new NumbersConveter();
+		List <Integer>  testInput1 = new ArrayList<Integer>(Arrays.asList(3,4,5,6,7));
+		List <Integer>  testInput2 = new ArrayList<Integer>(Arrays.asList(1,3,4,5,6,7));
+		List <Integer>  testInput3 = new ArrayList<Integer>(Arrays.asList(4,5,6,7));
+		List <Integer>  testInput4 = new ArrayList<Integer>(Arrays.asList(3,4,5,6,7,8,9,0));
+		assertEquals(testInput1,test1.collect("7,3,4,5,6"), "incorrect");
+		assertEquals(testInput2,test1.collect("1,3,4,5,6,7"), "incorrect");
+		assertEquals(testInput3,test1.collect("4,5,6,7"), "incorrect");
+		assertEquals(testInput4,test1.collect("3,4,5,6,7,8,9,0"), "incorrect");
+		
+	}
+	@Test
+	void SummarizeCollectiontest() {
+		
+		NumbersConveter test1 = new NumbersConveter();
+		assertEquals("1,3,6-8,12-15,21-24,31",test1.summarizeCollection(new ArrayList<Integer>(Arrays.asList(1,3,6,7,8,12,13,14,15,21,22,23,24,31))),"incorrect summary");
+		
+}
+	}

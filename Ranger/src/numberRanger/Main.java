@@ -11,12 +11,9 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		
 		NumbersConveter numObject = new NumbersConveter();
-
 		Collection<Integer> collectionExample = numObject.collect("3,5,8,-2,6,7,1");
 		System.out.println(numObject.summarizeCollection(collectionExample));
 		
-
 	}
 }

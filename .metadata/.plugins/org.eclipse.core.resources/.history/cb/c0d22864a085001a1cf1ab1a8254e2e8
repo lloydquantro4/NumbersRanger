@@ -1,0 +1,15 @@
+package numberRanger;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		NumbersConveter obj = new NumbersConveter();
+		
+		
+		System.out.println(obj.summarizeCollection(obj.collect("1,2,3,5")));
+		
+	
+	}
+}
+
