@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="NumbersConveterTest" project="Ranger" tests="2" started="2" failures="0" errors="0" ignored="0">
-  <testsuite name="numberRanger.NumbersConveterTest" time="0.038" displayname="NumbersConveterTest" uniqueid="[engine:junit-jupiter]/[class:numberRanger.NumbersConveterTest]">
-    <testcase name="Collectiontest" classname="numberRanger.NumbersConveterTest" time="0.022" displayname="Collectiontest()" uniqueid="[engine:junit-jupiter]/[class:numberRanger.NumbersConveterTest]/[method:Collectiontest()]"/>
-    <testcase name="SummarizeCollectiontest" classname="numberRanger.NumbersConveterTest" time="0.016" displayname="SummarizeCollectiontest()" uniqueid="[engine:junit-jupiter]/[class:numberRanger.NumbersConveterTest]/[method:SummarizeCollectiontest()]"/>
-  </testsuite>
-</testrun>
