@@ -5,7 +5,7 @@ import java.util.Collection;
 /*Assumptions:Empty Collections should result is regarded as Invalid input.
  *            Input of n,n+1 should result in a range of "n-n+1"
  *            Input contains no repeats. 
- *            Any other characters(Can not be parsed to an Integer) will be regarded as Invalid input
+ *            Any other characters(Can not be parsed to an Int) will be regarded as Invalid input
  * */
 public class Main
 {

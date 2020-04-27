@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;runningVal&apos; in &apos;numberRanger.NumbersConveter.summarizeCollection(...)&apos; to &apos;previousValue&apos;&#x0D;&#x0A;- Original project: &apos;Ranger&apos;&#x0D;&#x0A;- Original element: &apos;numberRanger.NumbersConveter.summarizeCollection(Collection&lt;Integer&gt;).runningVal&apos;&#x0D;&#x0A;- Renamed element: &apos;runningVal&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;runningVal&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;numberRanger{NumbersConveter.java[NumbersConveter~summarizeCollection~QCollection\&lt;QInteger;&gt;;@runningVal!1027!1076!1031!1040!I!0!false" name="previousValue" references="true" stamp="1587976349709" version="1.0"/>
+</session>
