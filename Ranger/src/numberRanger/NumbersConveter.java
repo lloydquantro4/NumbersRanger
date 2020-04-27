@@ -14,7 +14,7 @@ public class NumbersConveter implements NumberRangeSummarizer {
 		this.sb = new StringBuilder();
 	}
 
-	//Collect and sort input
+	//Collect and sort Input in ascending order
 	public Collection<Integer> collect(String input) {
 
 		try {
@@ -35,14 +35,14 @@ public class NumbersConveter implements NumberRangeSummarizer {
 		return inputNumbers;
 
 	}
-	//Iterate through the Collection while checking for consecutive numbers
+	
 	public String summarizeCollection(Collection<Integer> input) {
 
 		Iterator<Integer> iteratedCollection = input.iterator();
 
 		boolean isConsecutive = false;
 		boolean isFirstElement = true;
-		int runningVal = 0, counter = 0, currentValue = 0;
+		int previousValue = 0, counter = 0, currentValue = 0;
 
 		while (iteratedCollection.hasNext()) {
 
@@ -55,12 +55,12 @@ public class NumbersConveter implements NumberRangeSummarizer {
 				isFirstElement = false;
 				continue;
 			}
-
+			//Value in the collection is consecutive and is part of a running range
 			if ((currentValue == counter) && (isConsecutive))
 			{
 				if (iteratedCollection.hasNext())
 				{
-					runningVal = currentValue;
+					previousValue = currentValue;
 					counter++;
 					continue;
 				} else
@@ -68,23 +68,24 @@ public class NumbersConveter implements NumberRangeSummarizer {
 					sb.append(currentValue);
 				}
 			} 
+			//Value in the collection is the first value of a sequence
 			else if ((currentValue == counter)) 
 			{
 				if (iteratedCollection.hasNext()) 
 				{
 					sb.append("-");
 					counter++;
-					runningVal = currentValue;
+					previousValue = currentValue;
 					isConsecutive = true;
 					continue;
 				}
 			}
-			
-			else if (currentValue != counter) 
+			//Value in the collection is not in a sequence
+			else 
 			{
 				if (isConsecutive)
 				{
-					sb.append(runningVal);
+					sb.append(previousValue);
 				}	
 				sb.append("," + currentValue);
 				isConsecutive = false;
